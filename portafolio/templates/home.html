@@ -1,4 +1,3 @@
-
 {% extends 'layout.html' %}
 {% load static %}
 {% block content %}
@@ -8,10 +7,20 @@
         <img src="{% static 'portafolio/profile.jpeg' %}" alt="" class="img-fluid">
     </div>
     <div class="col-md-8 my-auto">
-        <h1>Soy <strong>Bastian Pavez</strong></h1>
-        <h3>Intento Convertirme en <Strong>Desarrollador Full Stack</Strong></h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio accusamus ullam nulla eveniet odit modi corporis rem obcaecati corrupti cupiditate illum, dolor sed, magni distinctio nemo molestias quasi sint aut fugiat repudiandae. Beatae facilis odit ducimus nisi sequi, reprehenderit facere dicta laudantium obcaecati ex excepturi vel modi ut, molestiae vero laborum id! Quaerat, similique aut ea sed tempore incidunt non repellat officiis. Natus nisi ullam consectetur molestiae alias perferendis dignissimos doloribus beatae numquam deleniti quibusdam, et labore quod, modi veniam deserunt voluptates vero quas exercitationem? Voluptas, voluptatem cum maxime eveniet cumque nisi, dignissimos officiis nesciunt beatae, aperiam necessitatibus expedita excepturi?</p>
-        <a href="{% static 'portafolio/CV-Bastian-Pavez.pdf' %}" target="_blank" class="btn btn-primary btn-lg rounded-0 my-3">Download CV</a>
+        <h1><strong>Soy Bastián Pavez</strong></h1>
+        <h3><strong>Aspirante a Desarrollador Full Stack</strong></h3>
+        <p>Soy Analista Programador egresado de INACAP, con formación en desarrollo full stack, bases de datos y diseño
+            ágil de sistemas. &nbsp;Me especializo en el análisis, diseño y construcción de soluciones tecnológicas, con
+            un enfoque en buenas prácticas y mejora continua.</p>
+        <p>Durante mi formación y proyectos personales, he trabajado con herramientas como <strong>Python</strong>,
+            <strong>Django</strong> y <strong>Git</strong>, lo que me ha permitido adquirir experiencia en desarrollo
+            web, control de versiones y metodologías ágiles.
+        </p>
+        <p>Mi objetivo es crear sistemas funcionales, escalables y centrados en el usuario. &nbsp;Me considero una
+            persona comprometida con el aprendizaje constante, la resolución de problemas y el crecimiento profesional
+            dentro del mundo del desarrollo de software.</p>
+        <a href="{% static 'portafolio/CV-Bastian-Pavez.pdf' %}" target="_blank"
+            class="btn btn-primary btn-lg rounded-0 my-3">Download CV</a>
     </div>
 </Header>
 <div class="row my-4 text-center">
@@ -25,15 +34,15 @@
             <div class="card-body">
                 <h2>{{ project.title }}</h2>
                 <p></p> {{ project.description}}</p>
-                
+
 
                 {% if project.url %}
-                    <a href="{{project.url}}" class="btn btn-outline-primary" target="_blank">{{project.url}}</a>
+                <a href="{{project.url}}" class="btn btn-outline-primary" target="_blank">{{project.url}}</a>
                 {% endif %}
             </div>
         </div>
     </div>
     {% endfor %}
 
-{% endblock %}
+    {% endblock %}
 </div>
